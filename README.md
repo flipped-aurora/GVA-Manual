@@ -1,5 +1,4 @@
-# GVA-Manual
-# GVA小白式使用说明书
+# GVA-Manual（GVA小白式使用说明书）
 
 ## 可以先看一遍视频
 
