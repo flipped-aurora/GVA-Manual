@@ -1,6 +1,6 @@
 # GVA-Manual（GVA小白式使用说明书）
 
-系统的学习先看 [GVA-FLP](/GVA-FLP.md)
+## 系统的学习先看  [GVA-FLP](/GVA-FLP.md)
 
 ## 可以先看一遍视频
 
