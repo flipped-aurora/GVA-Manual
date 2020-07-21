@@ -48,7 +48,7 @@
 2. 将 server  → db → qmplus.sql 导入
 3. 在本地安装redis
 
-*Tips：否安装resdis取决于是否限制多点登陆功能，若限制多点登陆，需要将配置文件中 `use-multipoint` 设置为 true*
+*Tips：是否安装resdis取决于是否限制多点登陆，若限制多点登陆，需要将配置文件中 `use-multipoint` 设置为 true*
 
 ## Step2：启动项目
 
