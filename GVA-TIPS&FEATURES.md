@@ -11,10 +11,9 @@
 使用方法如下，row中三个dom，效果为:
 
 - 第一个`dom`对角色ID为888的角色不显示
-
 - 第二个`dom`对角色ID为888的角色显示
-
 - 第三个`dom`对角色ID为888,999,111的角色不显示
+- 第四个`dom`对角色ID为888,999,111的角色显示
 
 ```vue
 <el-row :gutter="32">
@@ -29,6 +28,11 @@
         </div>
     </el-col>
     <el-col v-auth.not="[888,999,111]" :xs="24" :sm="24" :lg="8">
+        <div class="chart-wrapper">
+            <Sunburst/>
+        </div>
+    </el-col>
+      <el-col v-auth="[888,999,111]" :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
             <Sunburst/>
         </div>
