@@ -61,6 +61,10 @@
 
 ```nginx
 location  /v1 {
+  		proxy_set_header Host $http_host;
+			proxy_set_header  X-Real-IP $remote_addr;
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_set_header X-Forwarded-Proto $scheme;
     	rewrite ^/v1/(.*)$ /$1 break;  #重写
     	proxy_pass 后端地址; # 设置代理服务器的协议和地址
     }
