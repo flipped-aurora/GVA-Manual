@@ -4,7 +4,27 @@
 
 ----
 
-### [Feat.] 根据权限隐藏或展示前端dom （[2020.07.27更新](https://github.com/flipped-aurora/gin-vue-admin/commit/c5b1f279f9b6ce64835f8c5518fedd1025b9eaa0)）
+### [Feat.] 打包静态文件到二进制 （[Commits on Jul 29, 2020](https://github.com/flipped-aurora/gin-vue-admin/commit/c5b1f279f9b6ce64835f8c5518fedd1025b9eaa0)）（贡献者：[WangLeonard](https://github.com/WangLeonard)）
+
+与当前默认方式不冲突
+使用方式
+
+```shell
+go get -u github.com/go-bindata/go-bindata/...
+cd server
+// 如果提示找不到go-bindata，请排查下 $GOPATH/bin 是否在环境变量中
+go generate -tags=packfile ./packfile/usePackFile.go   
+go build -tags=packfile
+```
+
+即可将该二进制文件放置到任何位置运行，不再需要`resource/...` `config.yaml`
+程序启动时，会将`go build`时存储到二进制中的快照，写入到当前目录对应位置。
+
+写入到磁盘的行为，只会在文件不存在时进行写入，不会覆盖。
+
+本地简单测试无问题，如有问题请提交issue。
+
+### [Feat.] 根据权限隐藏或展示前端dom （[Commits on Jul 26, 2020](https://github.com/flipped-aurora/gin-vue-admin/commit/c5b1f279f9b6ce64835f8c5518fedd1025b9eaa0)）
 
 增加了`v-auth`指令,支持`v-auth.not` 
 
